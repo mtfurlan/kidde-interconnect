@@ -1,3 +1,2 @@
 (sym_lib_table
-  (lib (name unknown_parts)(type Legacy)(uri ${KIPRJMOD}/unknown_parts.lib)(options "")(descr ""))
 )

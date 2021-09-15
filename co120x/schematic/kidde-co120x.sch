@@ -160,39 +160,14 @@ Wire Wire Line
 	5900 5550 5900 5450
 Wire Wire Line
 	5900 5250 5850 5250
-$Comp
-L unknown_parts:Motorola_thing U1
-U 1 1 61405B6D
-P 5750 3750
-F 0 "U1" H 5750 3825 50  0000 C CNN
-F 1 "Motorola_thing" H 5750 3734 50  0000 C CNN
-F 2 "" H 5750 3750 50  0001 C CNN
-F 3 "" H 5750 3750 50  0001 C CNN
-	1    5750 3750
-	1    0    0    -1  
-$EndComp
-NoConn ~ 6050 4100
-NoConn ~ 6050 4000
-NoConn ~ 5450 4200
-NoConn ~ 5450 4000
 Connection ~ 5900 5250
 Wire Wire Line
 	5900 5250 6000 5250
 Wire Wire Line
 	6000 5250 6000 4900
-Wire Wire Line
-	6000 4900 6450 4900
-Wire Wire Line
-	6450 4900 6450 3900
-Wire Wire Line
-	6450 3900 6050 3900
 Connection ~ 6000 5250
 Wire Wire Line
 	6000 5250 6100 5250
-Wire Wire Line
-	6050 4200 6050 4800
-Wire Wire Line
-	6050 4800 5850 4800
 Wire Wire Line
 	5850 4800 5850 4950
 $Comp
@@ -208,9 +183,6 @@ F 3 "~" H 5550 5100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5550 4950 5550 4800
-Wire Wire Line
-	5550 4800 5850 4800
-Connection ~ 5850 4800
 $Comp
 L Device:R R12
 U 1 1 61409F24
@@ -575,13 +547,11 @@ Connection ~ 4200 3550
 Wire Wire Line
 	4200 3550 4150 3550
 Wire Wire Line
-	6400 5300 6700 5300
+	6400 5300 6950 5300
 Wire Wire Line
-	6700 5300 6700 2750
+	6950 5300 6950 2400
 Wire Wire Line
-	6700 2750 4100 2750
-Wire Wire Line
-	4100 2750 4100 3050
+	4100 2400 4100 3050
 Connection ~ 6400 5300
 Wire Wire Line
 	6400 5300 6400 5550
@@ -624,10 +594,6 @@ Wire Wire Line
 Wire Wire Line
 	5200 3350 4700 3350
 Connection ~ 4700 3350
-Wire Wire Line
-	5200 3050 5450 3050
-Wire Wire Line
-	5450 3050 5450 3900
 Connection ~ 5200 3050
 $Comp
 L Device:R R14
@@ -643,13 +609,9 @@ $EndComp
 Wire Wire Line
 	5200 3650 5200 3750
 Wire Wire Line
-	5200 4050 5200 4100
-Wire Wire Line
-	5200 4100 5450 4100
-Wire Wire Line
 	4850 3650 5200 3650
-Text Notes 5500 3650 0    50   ~ 0
-sticker says\n800-0350\n110720[A]\nchip says\n12C508A\n04P (backwards e 3 in a circle) MVA\n*motorola logo* 2035
+Text Notes 6350 3150 0    50   ~ 0
+sticker says\n800-0350\n110720[A]
 Wire Wire Line
 	2950 5000 3000 5000
 Connection ~ 3000 5000
@@ -663,6 +625,52 @@ Wire Wire Line
 Wire Wire Line
 	4300 5800 4250 5800
 Connection ~ 4300 5800
-Text Notes 5150 4700 0    50   ~ 0
+Text Notes 3500 6050 0    50   ~ 0
 all resistors are 5%\nunless otherwise marked
+$Comp
+L MCU_Microchip_PIC12:PIC12C508A-IP U?
+U 1 1 61515A80
+P 6050 3600
+F 0 "U?" H 6050 4381 50  0000 C CNN
+F 1 "PIC12C508A-IP" H 6050 4290 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6650 4250 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/40139e.pdf" H 6050 3600 50  0001 C CNN
+	1    6050 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3050 5700 3000
+Wire Wire Line
+	5700 3000 6050 3000
+Wire Wire Line
+	5200 3050 5700 3050
+Wire Wire Line
+	6950 2400 4100 2400
+NoConn ~ 5450 3600
+NoConn ~ 5450 3500
+NoConn ~ 6650 3700
+NoConn ~ 6650 3500
+Wire Wire Line
+	6650 3600 6750 3600
+Wire Wire Line
+	6750 3600 6750 4250
+Wire Wire Line
+	6750 4250 5200 4250
+Wire Wire Line
+	5200 4050 5200 4250
+Wire Wire Line
+	5450 3700 5400 3700
+Wire Wire Line
+	5400 3700 5400 4500
+Wire Wire Line
+	5400 4500 5550 4500
+Wire Wire Line
+	6000 4900 6050 4900
+Wire Wire Line
+	5550 4800 5850 4800
+Wire Wire Line
+	5550 4500 5550 4800
+Connection ~ 5550 4800
+Wire Wire Line
+	6050 4200 6050 4900
 $EndSCHEMATC
